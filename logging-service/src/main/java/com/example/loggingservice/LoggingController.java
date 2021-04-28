@@ -33,9 +33,6 @@ public class LoggingController {
     }
 
 
-
-
-
     @PostMapping("/log")
     public ResponseEntity<Void> log(@RequestBody Message msg)
     {
@@ -44,7 +41,6 @@ public class LoggingController {
         loggingService.addToLog(msg);
         return ResponseEntity.ok().build();
     }
-
 
 
 }

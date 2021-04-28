@@ -18,7 +18,7 @@ public class FasadeController {
 
     private final FasadeService fasadeService;
 
-    public FasadeController(FasadeService fasadeService)
+    public FasadeController(FasadeService fasadeService) throws Exception
     {
         this.fasadeService = fasadeService;
     }
@@ -32,7 +32,7 @@ public class FasadeController {
 
 
     @PostMapping("/facade_service")
-    public Mono<Void> addMessage(@RequestBody PayloadText text) {
+    public Mono<Void> addMessage(@RequestBody PayloadText text) throws Exception  {
        return fasadeService.addMessage(text);
     }
 
